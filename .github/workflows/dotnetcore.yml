@@ -14,4 +14,6 @@ jobs:
       with:
         dotnet-version: 3.0
     - name: Build with dotnet
-      run: dotnet build AzureFunctions --configuration Release
+      run: |
+        dotnet restore AzureFunctions
+        dotnet build AzureFunctions --configuration Release
